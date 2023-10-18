@@ -44,7 +44,10 @@
 			if(slid) {
 				await sleep(10000);
 			}
-			if(arrivals[0].stops.length === 0 || arrivals.length === 2) {
+			if(arrivals.length === 1) {
+				await reverseSlideAnimation?.();
+
+			} else  if(arrivals[0].stops.length === 0 || arrivals.length === 2) {
 				await hideRouteBar?.();
 				routeBarExtended = false;
 			}

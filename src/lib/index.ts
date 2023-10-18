@@ -1,0 +1,10 @@
+export * from "./misc";
+export * from "./routes";
+export * from "./stores";
+export * from "./GTFS";
+export * from "./stations";
+export * from "./parse";
+import trips from "./trips.json";
+import type { routes } from "./routes";
+const castedTrips = trips as Record<string, keyof typeof routes>;
+export { castedTrips as trips };

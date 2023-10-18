@@ -35,7 +35,7 @@
 			serviceMessage = "";
 			stations = arrivals[0].stops;
 			await sleep(10000);
-			if(arrivals.length === 2 || (!routeBarExtended && arrivals.length === 1)) {
+			if(arrivals[0].stops.length > 0 && arrivals.length === 2 || (!routeBarExtended && arrivals.length === 1)) {
 				await showRouteBar?.();
 				routeBarExtended = true;
 			}
@@ -44,7 +44,7 @@
 			if(slid) {
 				await sleep(10000);
 			}
-			if(arrivals.length === 2) {
+			if(arrivals[0].stops.length === 0 || arrivals.length === 2) {
 				await hideRouteBar?.();
 				routeBarExtended = false;
 			}

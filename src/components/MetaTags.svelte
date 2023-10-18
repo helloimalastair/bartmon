@@ -7,15 +7,15 @@
 	<title>{ title }</title>
 	<meta name="title" content={ title } />
 	<meta name="theme-color" content="#0099CC" />
-	<meta name="description" content="Monitor departures in real time on BART platforms. Works best in Landscape mode. Inspired by some other train system. Take a wild guess which one... This project is not affiliated with BART, or any other transit provider." />
+	<meta name="description" content="Monitor departures in real time on BART platforms. Works best in Landscape mode.  This project is not affiliated with BART, or any other transit provider." />
 	<meta property="og:type" content="website" />
 	<meta property="og:url" content={ url } />
 	<meta property="og:title" content={ title } />
-	<meta property="og:description" content="Monitor departures in real time on BART platforms. Works best in Landscape mode. Inspired by some other train system. Take a wild guess which one... This project is not affiliated with BART, or any other transit provider." />
+	<meta property="og:description" content="Monitor departures in real time on BART platforms. Works best in Landscape mode.  This project is not affiliated with BART, or any other transit provider." />
 	<meta property="og:image" content="https://bartmon.goalastair.com/icon.png" />
-	<meta property="twitter:card" content="summary_large_image" />
+	<meta property="twitter:card" content="summary" />
 	<meta property="twitter:url" content={ url } />
 	<meta property="twitter:title" content={ title } />
-	<meta property="twitter:description" content="Monitor departures in real time on BART platforms. Works best in Landscape mode. Inspired by some other train system. Take a wild guess which one... This project is not affiliated with BART, or any other transit provider." />
+	<meta property="twitter:description" content="Monitor departures in real time on BART platforms. Works best in Landscape mode.  This project is not affiliated with BART, or any other transit provider." />
 	<meta property="twitter:image" content="https://bartmon.goalastair.com/icon.png" />
 </svelte:head>

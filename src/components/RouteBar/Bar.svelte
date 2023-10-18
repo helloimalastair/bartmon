@@ -58,7 +58,7 @@
   }
 </style>
 <div id="route-bar" class={"absolute w-full h-40 border-t-4 border-dashed px-4 z-10 bg-white"} class:visible={visible} class:opacity-0={clear}>
-	<div class="absolute bottom-0 text-xl" bind:this={routeBarContent}>
+	<div class="flex absolute bottom-0 text-xl" bind:this={routeBarContent}>
 		{#each stopsRemaining as stop, index}
 			{#if index === stopsRemaining.length - 1}
 			<Stop name={stop} {color} bind:textElem={finalDestinationText}/>

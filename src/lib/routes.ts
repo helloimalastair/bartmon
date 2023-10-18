@@ -1,50 +1,60 @@
 export const routes = {
 	1: {
-		terminus: "SFIA/Millbrae",
+		code: "MLBR",
+		terminus: "Millbrae",
 		direction: "S",
 		color: "yellow"
 	},
 	2: {
-		terminus: "Antioch",
+		code: "PITT",
+		terminus: "Pittsburg/Bay Point",
 		direction: "N",
 		color: "yellow"
 	},
 	3: {
+		code: "RICH",
 		terminus: "Richmond",
 		direction: "N",
 		color: "orange"
 	},
 	4: {
+		code: "BERRY",
 		terminus: "Berryessa/N. San José",
 		direction: "S",
 		color: "orange"
 	},
 	5: {
+		code: "DALY",
 		terminus: "Daly City",
 		direction: "S",
 		color: "green"
 	},
 	6: {
+		code: "BERRY",
 		terminus: "Berryessa/N. San José",
 		direction: "N",
 		color: "green"
 	},
 	7: {
-		terminus: "Daly City/Millbrae",
+		code: "MLBR",
+		terminus: "Millbrae",
 		direction: "S",
 		color: "red"
 	},
 	8: {
+		code: "RICH",
 		terminus: "Richmond",
 		direction: "N",
 		color: "red"
 	},
 	11: {
+		code: "DALY",
 		terminus: "Daly City",
 		direction: "S",
 		color: "blue"
 	},
 	12: {
+		code: "DUBL",
 		terminus: "Dublin/Pleasanton",
 		direction: "N",
 		color: "blue"

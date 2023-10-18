@@ -1,4 +1,4 @@
-import { trips, routes, stations } from "$lib";
+import { trips, routes, stations, stops } from "$lib";
 import type { transit_realtime, StationsShort, Stations, Directions, RouteValues } from "$lib";
 
 type SubstituteType<T, A, B> = T extends A ? B : T extends {} ? { [K in keyof T]: SubstituteType<T[K], A, B> } : T;
@@ -10,7 +10,12 @@ export async function fetchAndParseData(station: StationsShort, direction: Direc
 		if (train.isDeleted || !(train.tripUpdate && train.tripUpdate.trip)) {
 			continue;
 		}
-		const route = routes[trips[train.tripUpdate.trip.tripId]];
+		const trip = (Number(train.tripUpdate.trip.tripId)) in trips;
+		// Trip not found
+		if (!trip) {
+			continue;
+		}
+		const route = routes[trips[Number(train.tripUpdate.trip.tripId)][0]];
 		for (const stop of train.tripUpdate.stopTimeUpdate) {
 			if (stop.stopId === station && route.direction === direction && stop.departure) {
 				const ttl = Math.round((stop.departure.time - Date.now() / 1000) / 60);
@@ -24,17 +29,8 @@ export async function fetchAndParseData(station: StationsShort, direction: Direc
 		if (!e.train.tripUpdate || !e.train.tripUpdate.trip) {
 			throw new Error("Invalid trip update");
 		}
-		const stationsLeft: Stations[] = [];
-		let foundStation = false;
-		for (const stop of e.train.tripUpdate.stopTimeUpdate) {
-			if (!foundStation) {
-				if (stop.stopId === station) {
-					foundStation = true;
-				}
-				continue;
-			}
-			stationsLeft.push(stations[stop.stopId as StationsShort]);
-		}
+		const allStops = stops[trips[Number(e.train.tripUpdate.trip.tripId)][1]];
+		const stationsLeft = allStops.slice(allStops.indexOf(station) + 1, allStops.length).map(s => stations[s]);
 		return {
 			id: e.train.tripUpdate.trip.tripId,
 			ttl: e.ttl,

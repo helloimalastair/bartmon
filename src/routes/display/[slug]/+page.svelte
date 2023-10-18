@@ -23,6 +23,7 @@
 			try {
 				arrivals = await fetchAndParseData(data.station, data.direction);
 			} catch(e) {
+				console.error(e);
 				serviceMessage = "Service outage, y'all! Please come back later!";
 				await sleep(30000);
 				continue;

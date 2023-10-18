@@ -20,7 +20,7 @@
 			animationStyle = document.createElement("style");
 			animationStyle.innerHTML = `@keyframes slideAnimation { 0% { transform: translateX(0); } 100% { transform: translateX(-${offset}px); } }`;
 			document.head.appendChild(animationStyle);
-			routeBarContent.style.animation = `slideAnimation ${duration}s linear 1 forwards`;
+			routeBarContent.style.animation = `slideAnimation ${duration}s ease-in-out 1 forwards`;
 			await sleep(duration * 1e3);
 			routeBarContent.style.animation = "";
 			routeBarContent.style.transform = `translateX(-${offset}px)`;
@@ -34,7 +34,7 @@
 		animationStyle = document.createElement("style");
 		animationStyle.innerHTML = `@keyframes slideAnimation { 0% { transform: translateX($-{offset}px); } 100% { transform: translateX(0); } }`;
 		document.head.appendChild(animationStyle);
-		routeBarContent.style.animation = `slideAnimation ${duration}s linear 1 forwards`;
+		routeBarContent.style.animation = `slideAnimation ${duration}s ease-in-out 1 forwards`;
 		await sleep(duration * 1e3);
 		routeBarContent.style.animation = "";
 		routeBarContent.style.transform = "";

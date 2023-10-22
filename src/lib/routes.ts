@@ -1,4 +1,13 @@
-export const routes = {
+import type { Stations, StationsShort } from "./stations";
+
+type Directions = "N" | "S";
+type Colors = "yellow" | "orange" | "green" | "red" | "blue";
+export const routes: Record<number, {
+	code: StationsShort,
+	terminus: string,
+	direction: Directions,
+	color: Colors
+}> = {
 	1: {
 		code: "MLBR",
 		terminus: "Millbrae",
@@ -18,7 +27,7 @@ export const routes = {
 		color: "orange"
 	},
 	4: {
-		code: "BERRY",
+		code: "BERY",
 		terminus: "Berryessa/N. San José",
 		direction: "S",
 		color: "orange"
@@ -30,7 +39,7 @@ export const routes = {
 		color: "green"
 	},
 	6: {
-		code: "BERRY",
+		code: "BERY",
 		terminus: "Berryessa/N. San José",
 		direction: "N",
 		color: "green"
@@ -66,8 +75,6 @@ type ValueOf<T> = T[keyof T];
 type RouteValues = ValueOf<typeof routes>;
 
 type Termini = RouteValues["terminus"];
-type Directions = RouteValues["direction"];
-type Colors = RouteValues["color"];
 
 interface Arrival {
 	id: string;
@@ -77,4 +84,9 @@ interface Arrival {
 	direction: Directions;
 }
 
-export type { Arrival, Termini, Directions, Colors, RouteValues };
+interface StatDir {
+	long: Stations,
+	dir: Directions[]
+}
+
+export type { Arrival, Termini, Directions, Colors, RouteValues, StatDir };

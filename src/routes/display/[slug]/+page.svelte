@@ -56,7 +56,7 @@
 	});
 </script>
 
-<MetaTags title={`${stationName} ${data.direction === "N" ? "Northbound" : "Southbound"} | BartMon`} path={"/display/" + data.station + '-' + data.direction} />
+<MetaTags title={`${stationName} ${data.direction === "N" ? "Northbound" : "Southbound"} | TransAria`} path={"/display/" + data.station + '-' + data.direction} />
 <div class="w-screen flex items-center justify-center h-screen bg-gray-900 p-0">
 	<div class="flex flex-col bg-gray-600 w-[70rem] h-80 overflow-hidden rounded-2xl relative items-stretch" bind:this={viewPort}>
 		{#if arrivals && arrivals.length > 0}

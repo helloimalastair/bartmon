@@ -27,13 +27,13 @@
 	});
 </script>
 
-<MetaTags title="BartMon" path="/" />
+<MetaTags title="TransAria" path="/" />
 
 <div class="flex items-center justify-center w-screen h-screen bg-gray-900">
 	<div class="w-2/5 h-4/5 bg-white rounded-3xl px-10 py-5">
-		<h1 class="text-6xl text-center">BartMon</h1>
+		<h1 class="text-6xl text-center">TransAria</h1>
 		<p class="text-center italic">Monitor departures in real time on BART platforms. Works best in Landscape mode. This project is not affiliated with BART, or any other transit provider.</p>
-		<p class="text-center">Source Available <a href="https://github.com/helloimalastair/bartmon" target="_blank" class="underline text-blue-line">on Github</a> under the GNU GPL v3 License.</p>
+		<p class="text-center">Source Available <a href="https://github.com/helloimalastair/transaria" target="_blank" class="underline text-blue-line">on Github</a> under the GNU GPL v3 License.</p>
 		<div class="flex flex-col items-center mt-7 gap-5">
 			<label for="Station" class="text-4xl">Station</label>
 			<select name="Station" class="text-2xl px-3 py-1 rounded-md" bind:value={selectedStation}>

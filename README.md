@@ -1,4 +1,4 @@
-# BARTMon 
+# TransAria 
 
 *Monitor departures in real time on BART platforms.*
 

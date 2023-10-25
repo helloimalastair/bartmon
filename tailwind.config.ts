@@ -22,6 +22,7 @@ const config: Config = {
 config.safelist = [
 	"opacity-0",
 	"translate-y-full",
+	"font-bold",
 	{
 		pattern: new RegExp(`bg-(${Object.keys(config.theme?.extend?.colors as Record<string, string>).join("|")})`),
 		variants: ["before"]

@@ -1,5 +1,5 @@
 import { trips, routes, stations, stops } from "$lib";
-import type { transit_realtime, StationsShort, Stations, Directions, RouteValues } from "$lib";
+import type { transit_realtime, StationsShort, Directions, RouteValues } from "$lib";
 
 type SubstituteType<T, A, B> = T extends A ? B : T extends {} ? { [K in keyof T]: SubstituteType<T[K], A, B> } : T;
 
@@ -30,7 +30,7 @@ export async function fetchAndParseData(station: StationsShort, direction: Direc
 			throw new Error("Invalid trip update");
 		}
 		const allStops = stops[trips[Number(e.train.tripUpdate.trip.tripId)][1]];
-		const stationsLeft = allStops.slice(allStops.indexOf(station) + 1, allStops.length).map(s => stations[s]);
+		const stationsLeft = allStops.slice(allStops.indexOf(station), allStops.length).map(s => stations[s]);
 		return {
 			id: e.train.tripUpdate.trip.tripId,
 			ttl: e.ttl,

@@ -35,6 +35,7 @@
 			}
 			serviceMessage = "";
 			stations = arrivals[0].stops;
+			console.log(stations);
 			await sleep(10000);
 			if(arrivals[0].stops.length > 0 && arrivals.length === 2 || (!routeBarExtended && arrivals.length === 1)) {
 				await showRouteBar?.();
@@ -47,7 +48,6 @@
 			}
 			if(arrivals.length === 1) {
 				await reverseSlideAnimation?.();
-
 			} else  if(arrivals[0].stops.length === 0 || arrivals.length === 2) {
 				await hideRouteBar?.();
 				routeBarExtended = false;

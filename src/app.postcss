@@ -4,7 +4,15 @@
 @tailwind utilities;
 @font-face {
 	font-family: "Office";
-	src: url(/office.woff2);
+	src: url(/fonts/office-700-normal.woff2);
+	font-weight: 700;
+	font-style: normal;
+}
+@font-face {
+	font-family: "Office";
+	src: url(/fonts/office-400-normal.woff2);
+	font-weight: 400;
+	font-style: normal;
 }
 @keyframes showRoute {
 	0% {
@@ -20,21 +28,5 @@
 	}
 	100% {
 		transform: translateY(-100%);
-	}
-}
-@keyframes upOne {
-	0% {
-		transform: translateY(0);
-	}
-	100% {
-		transform: translateY(100%);
-	}
-}
-@keyframes upTwo {
-	0% {
-		transform: translateY(0);
-	}
-	100% {
-		transform: translateY(100%);
 	}
 }

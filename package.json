@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "vite dev",
     "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
-    "deploy": "vite build && rm -rf .svelte-kit/cloudflare/_worker.js.map && esbuild .svelte-kit/cloudflare/_worker.js --minify --target=esnext --format=esm --allow-overwrite --legal-comments=none --outfile=.svelte-kit/cloudflare/_worker.js && wrangler pages deploy .svelte-kit/cloudflare"
+    "deploy": "vite build && rm -rf .svelte-kit/cloudflare/_worker.js.map && esbuild .svelte-kit/cloudflare/_worker.js --minify --target=esnext --format=esm --allow-overwrite --legal-comments=none --outfile=.svelte-kit/cloudflare/_worker.js && wrangler pages deploy .svelte-kit/cloudflare --project-name=transaria"
   },
   "devDependencies": {
     "@sveltejs/adapter-auto": "^2.0.0",
@@ -27,6 +27,6 @@
     "esbuild": "^0.19.5",
     "protons-runtime": "^5.0.5",
     "uint8arraylist": "^2.4.3",
-    "wrangler": "^3.13.2"
+    "wrangler": "^3.14.0"
   }
 }

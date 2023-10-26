@@ -3,6 +3,12 @@ import type { transit_realtime, StationsShort, Directions, RouteValues } from "$
 
 type SubstituteType<T, A, B> = T extends A ? B : T extends {} ? { [K in keyof T]: SubstituteType<T[K], A, B> } : T;
 
+/**
+ * Reads data from GTFS route, pulls the next max(2) departures for a given station and direction.
+ * Returns information about the route, terminus station, time to departure, and the stops in between.
+ * @param station Short Variant for Current Station(EMBR, WOAK, etc.)
+ * @param direction Cardinal Direction of Line(N, S only)
+ */
 export async function fetchAndParseData(station: StationsShort, direction: Directions) {
 	const { entity } = await (await fetch("/data")).json() as SubstituteType<transit_realtime.FeedMessage, bigint, number>;
 	let saved: { ttl: number, route: RouteValues, train: SubstituteType<transit_realtime.FeedEntity, bigint, number> }[] = [];

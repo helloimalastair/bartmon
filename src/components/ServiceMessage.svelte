@@ -1,4 +1,7 @@
 <script lang="ts">
+	/**
+	 * When things go wrong, this is who you call
+	*/
 	import getQuip from "./quips";
 	export let message: string;
 	let Quip = getQuip();

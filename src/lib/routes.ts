@@ -1,3 +1,7 @@
+/**
+ * Static data from BART GFTS. Source updated as needed
+ * + Typing
+ */
 import type { Stations, StationsShort } from "./stations";
 
 type Directions = "N" | "S";

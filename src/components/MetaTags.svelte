@@ -1,4 +1,7 @@
 <script lang="ts">
+	/**
+	 * Meta Tags for Social Embeds
+	 */
 	export let title: string;
 	export let path: string;
 	let url = `https://transaria.goalastair.com${path}`;

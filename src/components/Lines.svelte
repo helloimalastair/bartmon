@@ -1,4 +1,7 @@
 <script lang="ts">
+	/**
+	 * Animations and transitions for the Lines component
+	*/
 	import { flip } from "svelte/animate";
 	import { fly } from "svelte/transition";
 	import type { Arrival } from "$lib";

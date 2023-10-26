@@ -1,4 +1,7 @@
 <script lang="ts">
+	/**
+	 * Contains multiple custom animations.
+	*/
 	import Stop from "./Stop.svelte";
 	import { sleep } from "$lib";
 	import type { Stations, Colors } from "$lib";

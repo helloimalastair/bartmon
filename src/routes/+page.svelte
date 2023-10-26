@@ -19,6 +19,12 @@
 		}
 	}
 	onMount(async () => {
+		/**
+		 * When the page has loaded client-side, download the station mapping from the server.
+		 * This includes all stations, along with the directions they support.
+		 * When a station has been selected, the directional dropdown is narrowed to only the supported
+		 * direction(s).
+		 */
 		const statMapping = await (await fetch("/statdir")).json() as Record<StationsShort, StatDir>;
 		const intermidiary = Object.entries(statMapping);
 		selectedStation = intermidiary[0][0] as StationsShort;

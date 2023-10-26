@@ -1,3 +1,6 @@
+/**
+ * Directory used for quips when Service Messages are displayed
+ */
 import SSS from "./SSS.svelte";
 import Drop from "./Drop.svelte";
 import Plugged from "./Plugged.svelte";

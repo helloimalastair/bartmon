@@ -1,3 +1,7 @@
+/**
+ * Static data from BART GFTS. Source updated as needed
+ * + Typing
+ */
 export const stations = {
 	"12TH": "12th St. Oakland City Center",
 	"16TH": "16th St. Mission",

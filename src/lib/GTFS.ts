@@ -1,3 +1,6 @@
+/**
+ * Auto-generated with Protons, otherwise not doccumented.
+ */
 import { encodeMessage, decodeMessage, message, enumeration } from 'protons-runtime'
 import type { Codec } from 'protons-runtime'
 import type { Uint8ArrayList } from 'uint8arraylist'
